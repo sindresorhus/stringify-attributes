@@ -1,0 +1,41 @@
+{
+	"name": "stringify-attributes",
+	"version": "0.0.0",
+	"description": "Turn an object into a string of HTML attributes",
+	"license": "MIT",
+	"repository": "sindresorhus/stringify-attributes",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"html",
+		"attributes",
+		"stringify",
+		"element",
+		"tag",
+		"attr",
+		"props",
+		"object",
+		"obj",
+		"convert",
+		"transform"
+	],
+	"dependencies": {
+		"escape-goat": "^1.1.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
+}
