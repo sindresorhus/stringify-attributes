@@ -1,9 +1,9 @@
 import test from 'ava';
-import m from '.';
+import stringifyAttributes from '.';
 
 test('stringifies attributes', t => {
 	t.is(
-		m({
+		stringifyAttributes({
 			unicorn: '🦄',
 			rainbow: true,
 			number: 1,
@@ -16,14 +16,14 @@ test('stringifies attributes', t => {
 
 test('nothing', t => {
 	t.is(
-		m({}),
+		stringifyAttributes({}),
 		''
 	);
 });
 
 test('escapes attributes', t => {
 	t.is(
-		m({
+		stringifyAttributes({
 			class: '<script></script>'
 		}),
 		' class="&lt;script&gt;&lt;/script&gt;"'
