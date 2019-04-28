@@ -1,6 +1,6 @@
 {
 	"name": "stringify-attributes",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Turn an object into a string of HTML attributes",
 	"license": "MIT",
 	"repository": "sindresorhus/stringify-attributes",
