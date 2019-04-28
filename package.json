@@ -25,10 +25,8 @@
 		"stringify",
 		"element",
 		"tag",
-		"attr",
 		"props",
 		"object",
-		"obj",
 		"convert",
 		"transform"
 	],

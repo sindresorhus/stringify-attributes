@@ -1,10 +1,10 @@
 'use strict';
 const {htmlEscape} = require('escape-goat');
 
-module.exports = input => {
-	const attributes = [];
+module.exports = attributes => {
+	const handledAttributes = [];
 
-	for (let [key, value] of Object.entries(input)) {
+	for (let [key, value] of Object.entries(attributes)) {
 		if (value === false) {
 			continue;
 		}
@@ -19,8 +19,8 @@ module.exports = input => {
 			attribute += `="${htmlEscape(String(value))}"`;
 		}
 
-		attributes.push(attribute);
+		handledAttributes.push(attribute);
 	}
 
-	return attributes.length > 0 ? ' ' + attributes.join(' ') : '';
+	return handledAttributes.length > 0 ? ' ' + handledAttributes.join(' ') : '';
 };

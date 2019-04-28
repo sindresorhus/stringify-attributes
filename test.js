@@ -7,7 +7,10 @@ test('stringifies attributes', t => {
 			unicorn: '🦄',
 			rainbow: true,
 			number: 1,
-			multiple: ['a', 'b'],
+			multiple: [
+				'a',
+				'b'
+			],
 			alt: ''
 		}),
 		' unicorn="🦄" rainbow number="1" multiple="a b" alt=""'

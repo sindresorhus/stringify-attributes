@@ -19,7 +19,10 @@ stringifyAttributes({
 	unicorn: '🦄',
 	rainbow: true,
 	number: 1,
-	multiple: ['a', 'b']
+	multiple: [
+		'a',
+		'b'
+	]
 });
 //=> ' unicorn="🦄" rainbow number="1" multiple="a b"'
 ```
