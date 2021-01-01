@@ -1,4 +1,4 @@
-# stringify-attributes [![Build Status](https://travis-ci.org/sindresorhus/stringify-attributes.svg?branch=master)](https://travis-ci.org/sindresorhus/stringify-attributes)
+# stringify-attributes
 
 > Turn an object into a string of HTML attributes
 
