@@ -2,18 +2,16 @@
 
 > Turn an object into a string of HTML attributes
 
-
 ## Install
 
 ```
 $ npm install stringify-attributes
 ```
 
-
 ## Usage
 
 ```js
-const stringifyAttributes = require('stringify-attributes');
+import stringifyAttributes from 'stringify-attributes';
 
 stringifyAttributes({
 	unicorn: '🦄',
@@ -29,12 +27,6 @@ stringifyAttributes({
 
 Note that the string is prepended with a space when there are attributes to simplify using it in a HTML tag.
 
-
 ## Related
 
 - [create-html-element](https://github.com/sindresorhus/create-html-element) - Create a HTML element string
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

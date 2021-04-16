@@ -1,5 +1,5 @@
 import test from 'ava';
-import stringifyAttributes from '.';
+import stringifyAttributes from './index.js';
 
 test('stringifies attributes', t => {
 	t.is(

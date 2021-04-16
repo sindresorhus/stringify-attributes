@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import stringifyAttributes = require('.');
+import stringifyAttributes from './index.js';
 
 expectType<string>(stringifyAttributes({unicorn: '🦄'}));
 expectType<string>(stringifyAttributes({rainbow: true}));

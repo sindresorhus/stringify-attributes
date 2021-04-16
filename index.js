@@ -1,7 +1,6 @@
-'use strict';
-const {htmlEscape} = require('escape-goat');
+import {htmlEscape} from 'escape-goat';
 
-module.exports = attributes => {
+export default function stringifyAttributes(attributes) {
 	const handledAttributes = [];
 
 	for (let [key, value] of Object.entries(attributes)) {
@@ -23,4 +22,4 @@ module.exports = attributes => {
 	}
 
 	return handledAttributes.length > 0 ? ' ' + handledAttributes.join(' ') : '';
-};
+}
