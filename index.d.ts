@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export type HTMLAttributes = Record<string, string | number | boolean | readonly string[]>;
 
 /**

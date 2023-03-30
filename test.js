@@ -9,26 +9,26 @@ test('stringifies attributes', t => {
 			number: 1,
 			multiple: [
 				'a',
-				'b'
+				'b',
 			],
-			alt: ''
+			alt: '',
 		}),
-		' unicorn="🦄" rainbow number="1" multiple="a b" alt=""'
+		' unicorn="🦄" rainbow number="1" multiple="a b" alt=""',
 	);
 });
 
 test('nothing', t => {
 	t.is(
 		stringifyAttributes({}),
-		''
+		'',
 	);
 });
 
 test('escapes attributes', t => {
 	t.is(
 		stringifyAttributes({
-			class: '<script></script>'
+			class: '<script></script>',
 		}),
-		' class="&lt;script&gt;&lt;/script&gt;"'
+		' class="&lt;script&gt;&lt;/script&gt;"',
 	);
 });
