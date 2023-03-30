@@ -4,7 +4,7 @@ export default function stringifyAttributes(attributes) {
 	const handledAttributes = [];
 
 	for (let [key, value] of Object.entries(attributes)) {
-		if (value === false) {
+		if (value === false || value === undefined || value === null) {
 			continue;
 		}
 
