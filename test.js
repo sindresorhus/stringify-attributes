@@ -13,7 +13,7 @@ test('stringifies attributes', t => {
 			],
 			alt: '',
 			undef: undefined,
-			null: null
+			null: null,
 		}),
 		' unicorn="🦄" rainbow number="1" multiple="a b" alt=""'
 	);
