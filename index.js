@@ -1,4 +1,10 @@
-import {htmlEscape} from 'escape-goat';
+// Not using `escape-goat` as it escapes `'`, which is unnecessary here since values are always double-quoted, and it would mangle things like `url('foo.png')`.
+const escapeAttributeValue = string => string
+	.replace(/&/g, '&amp;')
+	.replace(/"/g, '&quot;')
+	// `<` and `>` don't need escaping in a double-quoted attribute, but we do it to be defensive and to keep them visibly distinct from HTML tags.
+	.replace(/</g, '&lt;')
+	.replace(/>/g, '&gt;');
 
 export default function stringifyAttributes(attributes) {
 	const handledAttributes = [];
@@ -12,10 +18,10 @@ export default function stringifyAttributes(attributes) {
 			value = value.join(' ');
 		}
 
-		let attribute = htmlEscape(key);
+		let attribute = escapeAttributeValue(key);
 
 		if (value !== true) {
-			attribute += `="${htmlEscape(String(value))}"`;
+			attribute += `="${escapeAttributeValue(String(value))}"`;
 		}
 
 		handledAttributes.push(attribute);

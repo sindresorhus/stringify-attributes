@@ -33,4 +33,18 @@ test('escapes attributes', t => {
 		}),
 		' class="&lt;script&gt;&lt;/script&gt;"',
 	);
+
+	t.is(
+		stringifyAttributes({
+			title: 'a & "b" <x>',
+		}),
+		' title="a &amp; &quot;b&quot; &lt;x&gt;"',
+	);
+});
+
+test('does not escape single quotes', t => {
+	t.is(
+		stringifyAttributes({style: 'background-image:url(\'foo.png\')'}),
+		' style="background-image:url(\'foo.png\')"',
+	);
 });

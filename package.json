@@ -33,9 +33,6 @@
 		"convert",
 		"transform"
 	],
-	"dependencies": {
-		"escape-goat": "^4.0.0"
-	},
 	"devDependencies": {
 		"ava": "^5.2.0",
 		"tsd": "^0.28.1",
